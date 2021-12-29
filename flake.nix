@@ -3,9 +3,9 @@
   inputs.flake-utils.url = "github:numtide/flake-utils";
 
   outputs = { self, nixpkgs, flake-utils, ... }@inputs: let
-    hostname = "nammu";
+    hostName = builtins.head (builtins.attrNames (import ./morph.nix));
   in {
-    nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.${hostName} = nixpkgs.lib.nixosSystem {
       system = "aarch64-linux";
       modules = [self.nixosModule];
     };
@@ -23,7 +23,7 @@
     };
     defaultApp = {
       type = "app";
-      program = "${pkgs.writeShellScript "deploy-${hostname}" ''
+      program = "${pkgs.writeShellScript "deploy-${hostName}" ''
         ${env}
         ${pkgs.morph}/bin/morph deploy ${self}/morph.nix switch
       ''}";

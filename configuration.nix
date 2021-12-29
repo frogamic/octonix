@@ -93,15 +93,13 @@
 
 	hardware.enableRedistributableFirmware = true;
 	networking = {
+	hostName = builtins.head (builtins.attrNames (import ./morph.nix));
+		domain = "internal.frogamic.website";
 		interfaces = {
 			eth0.useDHCP = true;
 			wlan0.useDHCP = true;
 		};
 		supplicant.wlan0.configFile.path = "/etc/wpa_supplicant.conf";
-	};
-
-	networking = {
-		domain = "internal.frogamic.website";
 		firewall.allowedTCPPorts = [ 80 443 ];
 	};
 
