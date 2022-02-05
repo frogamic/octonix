@@ -5,6 +5,7 @@
 			plugins.marlingcodedocumentation
 			plugins.printtimegenius
 			plugins.octoprint-dashboard
+			plugins.displaylayerprogress
 			(plugins.buildPlugin rec {
 				pname = "ActiveFiltersExtended";
 				version = "0.1.0";
@@ -13,16 +14,6 @@
 					repo = "OctoPrint-${pname}";
 					rev = version;
 					sha256 = "bkVybMPWyt0mCIBU38XPJkGqBiC03VTgJKkwY/E8Gws=";
-				};
-			})
-			(plugins.buildPlugin rec {
-				pname = "DisplayLayerProgress";
-				version = "1.28.0";
-				src = fetchFromGitHub {
-					owner = "OllisGit";
-					repo = "OctoPrint-${pname}";
-					rev = version;
-					sha256 = "FoQGv7a3ktodyQKOwR69/9Up+wPoW5NDq+k5LfP9WYs=";
 				};
 			})
 			(plugins.buildPlugin rec {
