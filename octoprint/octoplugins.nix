@@ -17,22 +17,22 @@
 			})
 			(plugins.buildPlugin rec {
 				pname = "DisplayLayerProgress";
-				version = "1.27.2";
+				version = "1.28.0";
 				src = fetchFromGitHub {
 					owner = "OllisGit";
 					repo = "OctoPrint-${pname}";
 					rev = version;
-					sha256 = "1f/ob772gn0ZCiOEv9zHs1AuGzxX/V3b/6jkXv0opfk=";
+					sha256 = "FoQGv7a3ktodyQKOwR69/9Up+wPoW5NDq+k5LfP9WYs=";
 				};
 			})
 			(plugins.buildPlugin rec {
 				pname = "macro";
-				version = "0.3.0";
+				version = "0.3.2";
 				src = fetchFromGitHub {
 					owner = "mike1pol";
 					repo = "OctoPrint_${pname}";
 					rev = version;
-					sha256 = "jn064M4C1mVUyxaiYi2RxlX1g3tU82FaeBFZTaB32GQ=";
+					sha256 = "qjKDT/dha4FxwNBCXkGG7vK1FMcVOvSaA9ETfoNNA7s=";
 				};
 			})
 			(plugins.buildPlugin rec {
@@ -57,12 +57,12 @@
 			})
 			(plugins.buildPlugin rec {
 				pname = "UICustomizer";
-				version = "0.1.8.0";
+				version = "0.1.8.1";
 				src = fetchFromGitHub {
 					owner = "LazeMSS";
 					repo = "OctoPrint-${pname}";
 					rev = version;
-					sha256 = "3qV757nwM8v3s5pIs1eZ/TW8S7+K1IOeX4GnZ551BhU=";
+					sha256 = "5Rm56BicC8rKTrsW46kZw4P5qVLHtLDJcN4bwc8Ofck=";
 				};
 			})
 			(plugins.buildPlugin rec {
@@ -97,12 +97,12 @@
 			})
 			(plugins.buildPlugin rec {
 				pname = "ActionCommandsPlugin";
-				version = "0.4";
+				version = "0.5";
 				src = fetchFromGitHub {
 					owner = "benlye";
 					repo = "OctoPrint-${pname}";
 					rev = version;
-					sha256 = "M0RpH8Ie+ee/iIKlzUbLxBMNzm4lkZrvttMnNpdOS4k=";
+					sha256 = "REXoHBKT1Ri7TnPGmbUTY/r9N5tRBGxxhiKk3ShwJds=";
 				};
 			})
 		];
